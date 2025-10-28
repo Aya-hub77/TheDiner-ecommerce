@@ -1,0 +1,87 @@
+.hero {
+  background: url('../../assets/main.jpg') no-repeat center center;
+  height: 500px;
+  margin: 0px 40px 20px;
+  background-size: cover;
+  border-radius: 10px;
+  overflow: hidden;
+  color: white;
+  position: relative;
+  top: 0px;
+  margin-top: 30px;
+}
+.hero h2 {
+  font-size: 50px;
+  margin-top: 70px;
+  padding: 0 50px;
+  width: 60%;
+}
+.hero p {
+  font-size: 18px;
+  width: 50%;
+  line-height: 1.5;
+  padding: 20px 50px;
+}
+.hero button {
+  margin-left: 200px;
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.hero button:hover {
+  background-color: #ff4500;
+}
+@media(max-width:768px){
+    .hero h2 {
+        font-size: 40px;
+        width: 80%;
+        padding: 20px;
+        margin-top: 20px;
+    }
+    .hero p {
+        font-size: 20px;
+        width: 80%;
+        padding: 20px;
+    }
+    .hero button {
+        margin-left: 100px;
+        margin-top: 30px;
+    }
+}
+@media(max-width: 400px){
+    .hero h2 {
+        font-size: 33px;
+        width: 100%;
+    }
+    .hero p {
+        font-size: 16px;
+        width: 100%;
+    }
+    .hero button {
+        margin-left: 50px;
+    }
+}
+@media(min-width: 1600px) {
+    .hero {
+        height: 700px;
+    }
+    .hero h2 {
+        font-size: 60px;
+        width: 50%;
+        margin-bottom: 30px;
+    }
+    .hero p {
+        font-size: 30px;
+    }
+    .hero button {
+        padding: 20px 40px;
+        font-size: 30px;
+        margin-top: 50px;
+        border-radius: 10px;
+    }
+}

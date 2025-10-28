@@ -1,0 +1,193 @@
+.navbar {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 70px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: white;
+    box-shadow: 0 6px 8px -4px rgba(0, 0, 0, 0.2);
+}
+.navbar h1 {
+    font-family: "Poppins", sans-serif;
+    color: #E63946;
+    cursor: pointer;
+    font-size: 40px;
+}
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    font-size: 20px;
+    color: #1D1D1D;
+}
+.nav-menu a {
+    list-style: none;
+    cursor: pointer;
+}
+.actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    position: relative; /* anchor for absolute-positioned search input */
+}
+.search {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+/* Icon button wrapper for accessibility and consistent spacing */
+.icon-btn {
+    background: transparent;
+    border: none;
+    margin-right: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #1D1D1D;
+}
+/* Inline search input that appears when the search icon is toggled */
+.navbar-search-input {
+    /* start collapsed and overlayed inside .actions so it doesn't push siblings */
+    position: absolute;
+    right: 50px; /* sits to the left of icons; tweak if needed */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    padding: 6px 10px;
+    font-size: 16px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    margin: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: width 0.18s ease, opacity 0.18s ease, border-color 0.18s ease, padding 0.18s ease;
+    z-index: 1100; /* above nav menu */
+}
+.navbar-search-input.open {
+    width: 240px;
+    padding: 8px 12px;
+    border-color: #ddd;
+    opacity: 1;
+    pointer-events: auto;
+}
+.navbar-search-input:focus {
+    border-color: #E63946;
+    box-shadow: 0 0 0 4px rgba(230,57,70,0.06);
+    outline: none;
+}
+.navbar .active {
+    padding-bottom: 2px;
+    border-bottom: 2px solid #1D1D1D;
+}
+.dot {
+    width: 10px;
+    height: 10px;
+    position: relative;
+    bottom: 30px;
+    right: 5px;
+}
+.hamburger {
+    display: none;
+}
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0 50px;
+    }
+    .navbar h1 {
+        font-size: 32px;
+    }
+    .hamburger {
+        display: block;
+        font-size: 30px;
+        position: absolute;
+        right: 20px;
+    }
+    .nav-menu, .actions {
+        display: none;
+    }
+    .nav-menu.open {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background-color: white;
+        padding: 12px 20px;
+        gap: 50px;
+        z-index: 999;
+    }
+    .actions.open {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        top: 120px;
+        left: 0;
+        right: 0;
+        background-color: white;
+        padding: 12px 20px;
+        z-index: 999;
+        gap: 20px;
+        justify-content: space-around;
+        box-shadow: 0 6px 8px -4px rgba(0, 0, 0, 0.2);
+    }
+    .navbar-search-input {
+        left: 50px;
+    }
+    .navbar-search-input.open {
+        width: 200px;
+    }
+}
+@media(max-width: 400px){
+    .navbar {
+        padding: 0 20px;
+    }
+    .actions:has(.navbar-search-input.open) {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        position: absolute;
+    }
+    .navbar-search-input {
+        left: 50px;
+    }
+    .navbar-search-input.open {
+        width: 250px;
+    }
+}
+@media(min-width:1600px) {
+    .navbar{
+        height: 100px;
+        padding: 0 100px;
+    }
+    .navbar h1 {
+        font-size: 46px;
+    }
+    .nav-menu {
+        font-size: 30px;
+    }
+    .actions .icon {
+        font-size: 50px;
+    }
+    .actions .navbar-search-input {
+        width: 300px;
+        padding: 12px 16px;
+        right: 100px;
+    }
+    .dot {
+        bottom: 40px;
+        width: 12px;
+        height: 12px;
+        right: 10px;
+    }
+}

@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Outfit";
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+body {
+  background-color: white;
+}
+
+/* Ensure anchored sections are scrolled into view below the sticky navbar */
+:root {
+  --navbar-height: 70px; /* keep in sync with .navbar height */
+}
+
+/* Any element with an id (anchor targets) will be offset so the sticky navbar doesn't cover it */
+[id] {
+  scroll-margin-top: calc(var(--navbar-height) + 8px);
+}

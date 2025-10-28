@@ -1,0 +1,71 @@
+.place-order {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 70px;
+    gap: 70px;
+}
+.place-order div {
+    width: 100%;
+}
+.place-order .order-info h3 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 30px;
+}
+.order-info .a, .b, .c, .d {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.order-info .b{
+    display: flex;
+    flex-direction: column;
+}
+.order-info input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #999;
+    width: 100%;
+}
+.order-info input:focus {
+    outline: none;
+    border: 1px solid #E63946;
+}
+.place-order .cart-totals {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media(max-width:400px){
+    .place-order {
+        flex-direction: column;
+        margin: 40px 20px;
+        gap: 40px;
+    }
+}
+@media(min-width:400px) and (max-width:768px){
+    .place-order {
+        flex-direction: column;
+        gap: 40px;
+        padding: 0 40px;
+    }
+    .place-order .cart-totals h3, .place-order .order-info h3 {
+        font-size: 30px;
+    }
+}
+@media(min-width:1600px){
+    .place-order {
+        margin: 50px;
+        padding: 100px 0;
+    }
+    .place-order .cart-totals h3, .place-order .order-info h3 {
+        font-size: 37px;
+    }
+    .order-info input {
+        padding: 20px;
+        border-radius: 10px;
+        font-size: 17px;
+    }
+}

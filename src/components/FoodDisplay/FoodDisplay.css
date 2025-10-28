@@ -1,0 +1,35 @@
+.food-display {
+    padding: 40px 60px;
+}
+.food-display h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #333;
+}
+.food-display-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 30px;
+    justify-items: center;
+    align-items: center;
+}
+@media(max-width: 768px){
+    .food-display {
+        padding: 40px 20px;
+    }
+}
+@media(min-width:1600px){
+    .food-display {
+        padding: 40px 100px;
+    }
+    .food-display h2 {
+        font-size: 42px;
+        margin-bottom: 40px;
+    }
+    .food-display-list {
+        grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
+        row-gap: 40px;
+        column-gap: 40px;
+    }
+}

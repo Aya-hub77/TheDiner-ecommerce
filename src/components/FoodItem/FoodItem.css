@@ -1,0 +1,100 @@
+.food-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+    /* smooth hover transition for transform and shadow */
+    transition: transform 200ms ease, box-shadow 200ms ease;
+}
+.food-item img {
+    width: 250px;
+    height: 250px;
+}
+.food-item-info {
+    padding: 0px 20px 20px;
+}
+.food-item-info h3 {
+    color: #444;
+    margin-bottom: 10px;
+}
+.food-item-info p:first-of-type {
+    color: #666;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+.food-item-info p:nth-of-type(2) {
+    color: #E63946;
+    font-size: 20px;
+}
+.food-item .add {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    left: 90px;
+    bottom: 40px;
+    cursor: pointer;
+    background-color: #eee;
+    border-radius: 50%;
+    padding: 5px;
+}
+.counter {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 90px;
+    bottom: 40px;
+    background-color: #eee;
+    border-radius: 30px;
+    margin-left: -20px;
+}
+.counter img {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+/* Hover state: lift the card and slightly zoom the image */
+.food-item:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+@media(min-width:1600px) {
+    .food-item {
+        width: 300px;
+    }
+    .food-item img {
+        width: 300px;
+        height: 300px;
+    }
+    .food-item-info h3 {
+        font-size: 24px;
+    }
+    .food-item-info p:first-of-type {
+        font-size: 18px;
+    }
+    .food-item-info p:nth-of-type(2) {
+        font-size: 22px;
+    }
+    .food-item .add {
+        width: 40px;
+        height: 40px;
+        bottom: 50px;
+    }
+    .counter {
+        bottom: 50px;
+        font-size: 20px;
+    }
+    .counter img {
+        width: 40px;
+        height: 40px;
+    }
+}
