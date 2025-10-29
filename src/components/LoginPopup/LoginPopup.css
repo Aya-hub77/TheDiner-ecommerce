@@ -1,7 +1,6 @@
 .login-popup {
-    /* Make the overlay cover the whole viewport and block background interaction/scroll */
     position: fixed;
-    inset: 0; /* top:0; right:0; bottom:0; left:0; */
+    inset: 0;
     z-index: 9999;
     width: 100vw;
     height: 100vh;
@@ -9,16 +8,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden; /* prevent overlay from scrolling */
-    touch-action: none; /* prevent touch-based scrolling behind the overlay */
-    overscroll-behavior: none; /* prevent scroll chaining to the page */
 }
 .login-popup h2 {
     color: #333;
 }
 body.login-open {
     overflow: hidden;
-    height: 100vh; /* helps ensure mobile/desktop don't scroll */
+    height: 100vh; 
 }
 .login-popup .container {
     width: 350px;

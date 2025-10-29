@@ -3,7 +3,7 @@ import './FoodItem.css'
 import counter from '../../assets/counter.png'
 import add from '../../assets/add.png'
 import remove from '../../assets/remove.png'
-import { StoreContext } from '../../Context/storeContext'
+import { StoreContext } from '../StoreContext'
 
 
 const FoodItem = ({ id, name, price, description, image }) => {

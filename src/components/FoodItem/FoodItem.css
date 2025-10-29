@@ -8,7 +8,6 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     cursor: pointer;
-    /* smooth hover transition for transform and shadow */
     transition: transform 200ms ease, box-shadow 200ms ease;
 }
 .food-item img {
@@ -61,8 +60,6 @@
     padding: 5px;
     cursor: pointer;
 }
-
-/* Hover state: lift the card and slightly zoom the image */
 .food-item:hover {
     transform: translateY(-6px) scale(1.02);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
