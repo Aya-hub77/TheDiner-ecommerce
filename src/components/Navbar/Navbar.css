@@ -35,31 +35,24 @@
     flex-direction: row;
     align-items: center;
     gap: 30px;
-    position: relative; /* anchor for absolute-positioned search input */
 }
 .search {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     gap: 10px;
     position: relative;
 }
-/* Icon button wrapper for accessibility and consistent spacing */
-.icon-btn {
+.search-icon {
     background: transparent;
     border: none;
-    margin-right: 12px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
     cursor: pointer;
     color: #1D1D1D;
 }
-/* Inline search input that appears when the search icon is toggled */
-.navbar-search-input {
-    /* start collapsed and overlayed inside .actions so it doesn't push siblings */
+.search-input {
     position: absolute;
-    right: 50px; /* sits to the left of icons; tweak if needed */
+    right: 50px; 
     top: 50%;
     transform: translateY(-50%);
     width: 0;
@@ -67,22 +60,20 @@
     font-size: 16px;
     border: 1px solid transparent;
     border-radius: 20px;
-    margin: 0;
     opacity: 0;
     pointer-events: none;
     transition: width 0.18s ease, opacity 0.18s ease, border-color 0.18s ease, padding 0.18s ease;
-    z-index: 1100; /* above nav menu */
+    z-index: 1100;
 }
-.navbar-search-input.open {
-    width: 240px;
+.search-input.open {
+    width: 220px;
     padding: 8px 12px;
-    border-color: #ddd;
+    border-color: #E63946;
     opacity: 1;
     pointer-events: auto;
-}
-.navbar-search-input:focus {
-    border-color: #E63946;
     box-shadow: 0 0 0 4px rgba(230,57,70,0.06);
+}
+.search-input:focus {
     outline: none;
 }
 .navbar .active {
@@ -141,10 +132,10 @@
         justify-content: space-around;
         box-shadow: 0 6px 8px -4px rgba(0, 0, 0, 0.2);
     }
-    .navbar-search-input {
+    .search-input {
         left: 50px;
     }
-    .navbar-search-input.open {
+    .search-input.open {
         width: 200px;
     }
 }
@@ -152,16 +143,16 @@
     .navbar {
         padding: 0 20px;
     }
-    .actions:has(.navbar-search-input.open) {
+    .actions:has(.search-input.open) {
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
         position: absolute;
     }
-    .navbar-search-input {
+    .search-input {
         left: 50px;
     }
-    .navbar-search-input.open {
+    .search-input.open {
         width: 250px;
     }
 }
@@ -179,7 +170,7 @@
     .actions .icon {
         font-size: 50px;
     }
-    .actions .navbar-search-input {
+    .actions .search-input {
         width: 300px;
         padding: 12px 16px;
         right: 100px;

@@ -13,7 +13,6 @@ a {
 body {
   background-color: white;
 }
-
 /* Ensure anchored sections are scrolled into view below the sticky navbar */
 :root {
   --navbar-height: 70px; /* keep in sync with .navbar height */
